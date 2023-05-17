@@ -1,0 +1,137 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+} 
+
+header {
+	position: fixed;
+	width: 100%;
+	max-width: 1500px;
+	padding: 10px;
+	background-color: cadetblue;
+}
+
+header p {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: white;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 3rem;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 20px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: white;
+	font-size: 1.3rem;
+}
+
+nav ul li a:hover {
+	color: black;
+}
+
+.home-wrapper {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	padding-top: 7rem;
+	gap: 30px;
+}
+
+.meeting-input {
+	border-bottom: 2px solid cadetblue;
+}
+
+.meeting-input h1 {
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.meeting-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px 30%;
+	gap: 16px;
+}
+
+.meeting-form, textarea {
+	width: 100%;
+}
+
+.attendance {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+main {
+	display:grid;
+	grid-template-columns: 100%;
+	/* border: 2px solid gray; */
+	border-radius: 20px;
+	padding: 16px ;
+	row-gap: 2rem;
+	column-gap: 2rem;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 16px;
+	border: 2px solid cadetblue;
+}
+
+.title-date {
+	background-color: rgb(133, 236, 240);
+}
+
+.title-date, h2 {
+	border-bottom: 2px solid cadetblue;
+	padding: 5px 10px;
+}
+
+.write-agenda-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0px 10px 0px 10px;
+	padding-left: 10px;
+}
+
+textarea {
+	outline: none;
+}
+
+.button-wrapper {
+	/* border: 1px solid cadetblue; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 15px;
+	padding: 10px;
+	margin: 12px;
+	border-radius: 5px;
+}
+
+.btn, .name {
+	padding: 12px 20px;
+	margin: 10px;
+}
+
+

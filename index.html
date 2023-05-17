@@ -8,44 +8,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <p>Al-Risala Org.</p>
-        <div class="container">
-        <section class="title-date">
-            <H1>Meeting Minute</H1>
-            <p class="date"></p>
-        </section>
-        <section>
-            <form>
-            <div>
-                <h2>Agenda</h2>
-                <textarea name="Agenda" id="agenda" cols="30" rows="10"></textarea>
-            </div>
-            <div>
-                <h2>Action Items</h2>
-                <textarea name="Action" id="action" cols="30" rows="10"></textarea>
-            </div>
-            <button type="submit">Save</button>
-            <button type="button">Edit</button>
-            <button type="button">Delete</button>
+
+    <!--Header-->
+    <header class="header">
+        <nav>
+            <p class="logo">AL-RISALA-ORG</p>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#meeting" class="nav-link">Meeting</a></li>
+                <li class="nav-item"><a href="#attendance" class="nav-link">Attendance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Meeting Minute-->
+    <!--Home-->
+    <div class="home-wrapper page" id="home">
+        <section class="meeting-input">
+            <h1>Meeting Minute</h1>
+            <form class="meeting-form">
+                <!-- <input type="date" name="date" id="date" class="meeting-date" /> -->
+                <textarea name="Agenda" id="agenda" cols="39" rows="10" placeholder="Agenda" class="meeting-agenda"></textarea>
+                <textarea name="Action" id="action" cols="39" rows="10" placeholder="Action-Items"
+                    class="meeting-action"></textarea>
+                <button type="submit" class="save-meeting btn">Save</button>
             </form>
         </section>
-        <section class="attendance">
-            <div>
-                <form class="attendance">
-                <p>time</p>
-                <input type="text" placeholder="name" />
-                <button type="submit" class="save-attendance">save</button>
-                <button type="button" class="close-attendance">Close</button>
-                <button type="submit" class="add-attendance">Add-New</button>
-                </form>
-            </div>
-        </section>
-        </div>
-    </main>
-    <section class="attend-holder">
-        <p class="date"></p>
         
-    </section>
+        <section class="attendance">
+            <form class="attendance">
+                <input type="time" class="time" required />
+                <input type="text" placeholder="name" class="name" required />
+                <button type="submit" class="save-attendance btn">save</button>
+            </form>
+        </section>
+    </div>
+
+    <!--meeting-container -->
+    <main class="main page" id="meeting">
+        <div class="container"></div>
+    </main>
+
+    <!--Attendance-->
+    
+    <section class="attend-holder page" id="attendance"></section>
+
+    <script src="index.js"></script>
+    <script src="attendance.js"></script>
+    <script src="navigation.js"></script>
 </body>
 </html>
