@@ -17,15 +17,18 @@ function renderAttendance(attendances) {
         attendDiv.classList.add('attendance-wrapper')
         attendDiv.setAttribute('data-index', index)
         attendDiv.innerHTML = ` 
-        <span class="att-date"> ${attendance.attendDate}</span>
-        <span class="time-span"> ${attendance.time}</span>
+        <section class="date-wrapper"><span class="atten-date"> ${attendance.attendDate}</span></section>
+        <section class="name-time-wrapper">
+        <div class="name-time">
+        <p class="time-span"> ${attendance.time}</p>
         <p class="att-par">${attendance.name}
         </p>
         </div>
         <div class="button-wrapper-att">
-        <button type="button" class="Edit-att btn">Edit</button>
-        <button type="button" class="Delete-att btn">Delete</button>
+        <button type="button" class="Edit-att">Edit</button>
+        <button type="button" class="Delete-att">Delete</button>
         </div>
+        </section>
      ` 
     attendList.appendChild(attendDiv)
     })
@@ -48,8 +51,8 @@ function addAttendanceForm() {
     renderAttendance(attendances)
     nameInput.value = ''
     time.value = '12:00';
-    let attendate = document.querySelector('.att-date')
-    attendate.hidden = false;
+    // let attendate = document.querySelector('.att-date')
+    // attendate.hidden = false;
 
 }
 
@@ -75,7 +78,7 @@ saveAttendanceBtn.addEventListener('click', saveAttendance)
 
 attendList.addEventListener('click', function(e) {
     if(e.target.classList.contains('Delete-att')) {
-        let index = e.target.parentElement.parentElement.dataset.index
+        let index = e.target.parentElement.parentElement.parentElement.getAttribute('data-index')
         attendances.splice(index, 1)
         localStorage.setItem('attendances', JSON.stringify(attendances))
         renderAttendance(attendances)
@@ -100,6 +103,13 @@ attendList.addEventListener('click', function(e) {
     }
 })
 
+closeAttendance.addEventListener('click', function() {  
+    nameInput.hidden = true
+    time.hidden = true;
+    saveAttendanceBtn.hidden = true
+    addAttendance.hidden = false;
+    attendDate.hidden = true;
+});
 renderAttendance(attendances, attendList)
 
 

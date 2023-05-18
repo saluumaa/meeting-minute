@@ -10,6 +10,6 @@ navLinks.forEach((link) => {
       page.style.display = 'none';
     });
     
-    document.getElementById(targetId).style.display = 'block';
+    document.getElementById(targetId).style.display = 'grid';
   });
 });

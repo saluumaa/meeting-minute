@@ -4,6 +4,11 @@
 	box-sizing: border-box;
 } 
 
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color:ghostwhite;
+}
+
 header {
 	position: fixed;
 	width: 100%;
@@ -86,16 +91,17 @@ main {
 	border-radius: 20px;
 	padding: 16px ;
 	row-gap: 2rem;
-	column-gap: 2rem;
+	column-gap: 1rem;
+	padding-top: 6rem;
 }
 
 .container {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	gap: 16px;
+	gap: 10px;
 	border: 2px solid cadetblue;
-	margin-top: 6rem;
+
 }
 
 .title-date {
@@ -105,6 +111,7 @@ main {
 .title-date, h2 {
 	border-bottom: 2px solid cadetblue;
 	padding: 5px 10px;
+	text-align: center;
 }
 
 .write-agenda-wrapper {
@@ -117,6 +124,7 @@ main {
 
 textarea {
 	outline: none;
+	font-size: 1.2rem;
 }
 
 .button-wrapper {
@@ -136,21 +144,23 @@ textarea {
 
 .btn {
 	background-color: cadetblue;
-	padding: 12px 12px;
+	padding: 10px 12px;
 	margin: 10px;
 	color: white;
 	font-size: 1.5rem;
 	cursor: pointer;
+	border-radius: 10px;
 }
 
 .attend-holder {
 	padding-top: 7rem;
 	display: none;
-	/* border: 1px solid cadetblue; */
 }
 
 .attend-container {
 	border: 2px solid cadetblue;
+	border-radius: 15px;
+	margin-top: 10px;
 }
 
 .att-par {
@@ -159,17 +169,87 @@ textarea {
 
 .attendance-wrapper {
 	display: flex;
-	padding: 10px 10px;
-	gap: 15px;
-	border-radius: 5px;
-	/* border: 2px solid cadetblue; */
-	border-bottom: none;
+	flex-direction: column;
+	padding: 0 10px;
+}
+.name-time-wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 10px;
+	padding: 15px;
+	flex-wrap: wrap;
 }
 
-.button-wrapper-att button{
-	margin-top: -10px;
+.name-time {
+	display: flex;
+	padding-top: 10px;
+	font-size: 1.1rem;
+}
+
+.button-wrapper-att {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
 	outline: none;
 	border: none;
+	margin-left: 15px;
 }
 
+.Edit-att, .Delete-att {
+	background-color: cadetblue;
+	padding: 8px;
+	color: white;
+	font-size: 1.2rem;
+	cursor: pointer;
+	margin-right: 8px;
+}
 
+.date-wrapper {
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	padding-top: 10px;
+	background-color: cadetblue;
+	border-bottom: 1px solid cadetblue;
+	border-radius: 5px;
+}
+
+.att-date {
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.att-time {
+	padding: 10px;
+	margin-top: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+	.home-wrapper {
+	  display: grid;
+		grid-template-columns: 50% 50%;
+		
+	}
+	.meeting-input {
+		border-right: 2px solid cadetblue;
+		border-bottom: none;
+	}
+	.meeting-form {
+		padding: 10px 15%;
+	}
+
+	.attendance {
+		padding: 10px 5%;
+	}
+
+	main {
+		grid-template-columns: 50% 50%;
+		margin-right: 10px;
+	}
+
+	.attend-holder {
+		padding-top: 5rem;
+		margin: 0 10%;
+	}
+}
