@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting-Minute</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--Header-->
+    <header class="header">
+        <nav>
+            <p class="logo">AL-RISALA-ORG</p>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#meeting" class="nav-link">Meeting</a></li>
+                <li class="nav-item"><a href="#attendance" class="nav-link">Attendance</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!--Home-->
+    <div class="home-wrapper page" id="home">
+        <section class="meeting-input">
+            <h1>Meeting Minute</h1>
+            <form class="meeting-form">
+                <input type="date" name="date" id="date" class="meeting-date" />
+                <textarea name="Agenda" id="agenda" cols="20" rows="4" placeholder="Agenda" class="meeting-agenda"></textarea>
+                <textarea name="Action" id="action" cols="20" rows="4" placeholder="Action-Items"
+                    class="meeting-action"></textarea>
+                <button type="submit" class="save-meeting btn">Save</button>
+            </form>
+        </section>
+        
+        <section class="attendance">
+            <h2>Meeting-Attendance</h2>
+            <form class="attendance">
+                <input type="time" class="time att-time" required hidden />
+                <input type="date" class="att-date" required hidden />
+                <input type="text" placeholder="name" class="name" required hidden />
+                <button type="submit" class="save-attendance btn" hidden >save</button>
+                <button type="button" class="add-attendance btn">Add-New-Attendance</button>
+                <button type="button" class="close-attendance btn">Close</button>
+            </form>
+        </section>
+    </div>
+
+    <!--meeting-container -->
+    <main class="main page" id="meeting">
+        <h2>Meeting Minutes</h2>
+        <div class="container"></div>
+    </main>
+
+    <!--Attendance-->
+    
+    <section class="attend-holder page" id="attendance">
+        <h2>Attendance-Data</h2>
+        <div class="attend-container">
+            <div class="attend-list"></div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+    <script src="attendance.js"></script>
+    <script src="navigation.js"></script>
+</body>
+</html>
