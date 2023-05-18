@@ -36,7 +36,7 @@ nav ul {
 nav ul li a {
 	text-decoration: none;
 	color: white;
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 }
 
 nav ul li a:hover {
@@ -77,12 +77,12 @@ nav ul li a:hover {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding: 10px 20%;
 }
 
 main {
-	display:grid;
+	display:none;
 	grid-template-columns: 100%;
-	/* border: 2px solid gray; */
 	border-radius: 20px;
 	padding: 16px ;
 	row-gap: 2rem;
@@ -95,6 +95,7 @@ main {
 	flex-wrap: wrap;
 	gap: 16px;
 	border: 2px solid cadetblue;
+	margin-top: 6rem;
 }
 
 .title-date {
@@ -119,7 +120,6 @@ textarea {
 }
 
 .button-wrapper {
-	/* border: 1px solid cadetblue; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -129,9 +129,47 @@ textarea {
 	border-radius: 5px;
 }
 
-.btn, .name {
-	padding: 12px 20px;
+.name {
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.btn {
+	background-color: cadetblue;
+	padding: 12px 12px;
 	margin: 10px;
+	color: white;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.attend-holder {
+	padding-top: 7rem;
+	display: none;
+	/* border: 1px solid cadetblue; */
+}
+
+.attend-container {
+	border: 2px solid cadetblue;
+}
+
+.att-par {
+	padding-left: 1.5rem;
+}
+
+.attendance-wrapper {
+	display: flex;
+	padding: 10px 10px;
+	gap: 15px;
+	border-radius: 5px;
+	/* border: 2px solid cadetblue; */
+	border-bottom: none;
+}
+
+.button-wrapper-att button{
+	margin-top: -10px;
+	outline: none;
+	border: none;
 }
 
 
